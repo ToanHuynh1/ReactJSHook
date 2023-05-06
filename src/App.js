@@ -5,12 +5,14 @@ import { useState,useEffect } from 'react';
 import Todo from './views/Todo';
 import Covid from './views/Covid';
 import {CountDown, NewCounDown} from './views/CountDown';
+import Blog from './views/Blog';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import BlogDetail from './views/BlogDetail';
 
 const App = () => {
   const [name, setName] = useState('')
@@ -79,6 +81,15 @@ const App = () => {
                 <input type='text' style={{marginTop: '10px', marginBottom: '10px'}} className='input' onChange={event => handleOnChange(event)} value={name}/>
                 <button style={{marginTop: '10px'}} type='button' onClick={(event) => handleClickStart(event)}>Click me</button>
             </Route>
+
+            <Route path="/blog" exact>
+              <Blog />
+            </Route>
+
+            <Route path="/blog/:id" exact>
+              <BlogDetail />
+            </Route>
+
         </Switch>
 
       </div>

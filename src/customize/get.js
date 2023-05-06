@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import moment from 'moment'
-const useGet = (url) => {
+const useGet = (url, isCovidData) => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoangding] = useState(true)
     const [isError, setIsError] = useState(false)
@@ -19,15 +19,14 @@ const useGet = (url) => {
     
             let data = response && response.data ? response.data : []
         
-            if (data && data.length > 0)
+            if (data && data.length > 0 && isCovidData == true)
             {
                 data.map(item => {
                     item.Date = moment(item.Date).format('DD/MM/YYYY') 
                     return item 
                 })
-        
-                    data = data.reverse()
-                }
+                data = data.reverse()
+            }
             setData(data)
             setIsLoangding(false)
             setIsError(false)
