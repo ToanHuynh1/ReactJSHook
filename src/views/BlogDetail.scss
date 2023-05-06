@@ -1,0 +1,33 @@
+.back
+{
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color:aquamarine;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.content{
+    margin-top: 20px;
+    padding: 20px 80px;
+    .detail-content
+    {
+        height: 100px;
+        background-color: rgb(245, 247, 177);
+        border: 1px solid rgb(199, 169, 169);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+}
