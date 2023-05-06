@@ -1,0 +1,46 @@
+.topnav {
+    // overflow: hidden;
+    background-color: #949191;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    a{
+      // float: left;
+      color: #f2f2f2;
+      // text-align: center;
+      line-height: 40px;
+      padding: 0 16px;
+      text-decoration: none;
+      font-size: 17px;
+
+      &:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      &.active1 {
+        background-color: #04AA6D;
+        color: white;
+      }
+    }
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  // tất cả những dòng chẵn tr màu #dddddd
+  tr:nth-child(even) {
+    background-color: #9e6565;
+  }
+
+ 
