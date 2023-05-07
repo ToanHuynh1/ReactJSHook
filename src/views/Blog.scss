@@ -1,4 +1,22 @@
-.container{
+.btn-add-new
+{
+    margin: 20px 0;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color:aquamarine;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.container-blog{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -9,7 +27,9 @@
     {
         border: 1px solid rgb(153, 148, 148);
         max-width: 300px;
-        height: 220px;
+        height: 230px;
+        min-width: 300px;
+        min-height: 230px;
         display: flex;
         margin: 10px;
         background-color: bisque;
@@ -31,7 +51,7 @@
             }
           
         }
-        .content
+        .content-blog
         {
             height: 160px;
             padding: 10px 0px;

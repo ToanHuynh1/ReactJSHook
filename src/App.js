@@ -13,6 +13,7 @@ import {
   Link
 } from "react-router-dom";
 import BlogDetail from './views/BlogDetail';
+import AddNewBlog from './views/AddNewBlog';
 
 const App = () => {
   const [name, setName] = useState('')
@@ -54,9 +55,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-
           <Nav/>
-        
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
           </header>
@@ -88,6 +87,10 @@ const App = () => {
 
             <Route path="/blog/:id" exact>
               <BlogDetail />
+            </Route>
+
+            <Route path="/add-new-blog" exact>
+              <AddNewBlog />
             </Route>
 
         </Switch>

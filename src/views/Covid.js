@@ -13,6 +13,8 @@ const Covid = () =>
     const priorDate =  moment().startOf('day').subtract(31,'days').toISOString(true)
 
     const {data:dataCovid, isLoading, isError} = useGet(`https:/api.covid19api.com/country/vietnam?from=${priorDate}to=${today}`, true)
+
+    console.log(dataCovid)
 return (
     <>
     <h2>Covid-19 in VietNam</h2>

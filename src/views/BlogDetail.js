@@ -17,13 +17,19 @@ const BlogDetail = (props) => {
             <div className="content">
             {dataDetailBlog  && (
                 <div className="detail-content">
-                    <div style={{marginBottom: '10px', marginTop: '10px'}}>
-                        <b>Title:</b>{dataDetailBlog.title}
-                    </div>
-
+                    {isLoading == false && (
                     <div>
-                        <b>Body:</b>{dataDetailBlog.body}
+                        <div style={{marginBottom: '10px', marginTop: '10px'}}>
+                            <b>Title:</b>{dataDetailBlog.title}
+                        </div>
+
+                        <div>
+                            <b>Body:</b>{dataDetailBlog.body}
+                        </div>
                     </div>
+                    )}
+
+                    {isLoading == true && <div style={{marginTop: '10px'}}>Loading...</div>}
                 </div>
             )}
   
