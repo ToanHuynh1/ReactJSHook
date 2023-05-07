@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import BlogDetail from './views/BlogDetail';
 import AddNewBlog from './views/AddNewBlog';
+import NotFound from './views/NotFound';
 
 const App = () => {
   const [name, setName] = useState('')
@@ -91,6 +92,10 @@ const App = () => {
 
             <Route path="/add-new-blog" exact>
               <AddNewBlog />
+            </Route>
+
+            <Route path="*" exact>
+              <NotFound />
             </Route>
 
         </Switch>

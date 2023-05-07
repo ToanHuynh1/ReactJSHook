@@ -59,7 +59,7 @@ const Blog = (props) => {
                 return(
                         <div className="one-blog" key={index}>
                             <div className="title-blog">
-                                <div style={{cursor: 'pointer'}} onClick={() => deletePost(item.id)}>X</div>
+                                <div style={{cursor: 'pointer', textAlign: 'center'}} onClick={() => deletePost(item.id)}>X</div>
                                 <b>Title:</b> {item.title}
                              
                             </div>
