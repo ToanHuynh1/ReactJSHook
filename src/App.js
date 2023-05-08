@@ -15,6 +15,9 @@ import {
 import BlogDetail from './views/BlogDetail';
 import AddNewBlog from './views/AddNewBlog';
 import NotFound from './views/NotFound';
+import SearchYoutube from './views/SearchYoutube';
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
 
 const App = () => {
   const [name, setName] = useState('')
@@ -92,6 +95,10 @@ const App = () => {
 
             <Route path="/add-new-blog" exact>
               <AddNewBlog />
+            </Route>
+
+            <Route path="/secret" exact>
+              <SearchYoutube />
             </Route>
 
             <Route path="*" exact>
