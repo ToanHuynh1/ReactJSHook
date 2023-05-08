@@ -1,11 +1,14 @@
 import './SearchYoutube.scss'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import moment from 'moment'
 
 const SearchYoutube = (props) => {
+    let history = useHistory()
     const [video, setVideo] = useState([])
     const [query, setQuery] = useState('')
+    const [id, setId] = useState('')
 
     useEffect(() => {
         
@@ -43,6 +46,10 @@ const SearchYoutube = (props) => {
         }
     }
 
+    const handleClickDetailVide = (id) => {
+        history.push(`/detail-youtube/${id}`)
+    }
+
     return(
         <div className="youtube-search-container">
             <div className="yt-search">
@@ -69,7 +76,7 @@ const SearchYoutube = (props) => {
                     </div>
 
                     <div className='right'>
-                        <div className='title'>
+                        <div className='title' onClick={() => handleClickDetailVide(item.id)}>
                             {item.title}
                         </div>
 

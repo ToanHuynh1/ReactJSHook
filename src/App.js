@@ -16,7 +16,7 @@ import BlogDetail from './views/BlogDetail';
 import AddNewBlog from './views/AddNewBlog';
 import NotFound from './views/NotFound';
 import SearchYoutube from './views/SearchYoutube';
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+import DetailVideoYoutube from './views/DetailVideoYoutube';
 
 
 const App = () => {
@@ -99,6 +99,10 @@ const App = () => {
 
             <Route path="/secret" exact>
               <SearchYoutube />
+            </Route>
+
+            <Route path="/detail-youtube/:id" exact>
+              <DetailVideoYoutube />
             </Route>
 
             <Route path="*" exact>
